@@ -1,8 +1,8 @@
-# Maria Brió Pérez
+# Sarvadnya Jawle | DevOps Engineer♾️
 
 <p align="center">
   <a href="https://mariabrio.vercel.app">
-    <img src="app/src/img/test-profile.png" width="70" alt="Portfolio's favicon.">
+    <img src="app/src/favicon/favicon-512x512.png" width="70" alt="Portfolio's favicon.">
   </a>
 </p>
 <p align="center">
