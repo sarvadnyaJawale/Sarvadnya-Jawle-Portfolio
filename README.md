@@ -1,4 +1,4 @@
-# Sarvadnya Jawle | DevOps Engineer♾️
+# Sarvadnya Jawle |♾️
 
 <p align="center">
   <a href="https://mariabrio.vercel.app">
@@ -15,7 +15,6 @@
   <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript badge" title="JavaScript" />
   <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass badge" title="Sass" />
 </div>
----
 
 Table of Contents
 -----------------
@@ -40,7 +39,6 @@ Certificates. Trainings. Degrees. We have a huge vested interest in them, partly
 
 ---
 
-# 💾 Content
 # 💾 Content
 
 | Section                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -112,11 +110,4 @@ In this case, the idea I had in mind was simple: a clean, minimalist, compact po
 Swiper is considered one of the most modern free and open-source mobile touch slider with hardware-accelerated transitions - websites, web apps, and mobile native/hybrid apps are no exception!
 
 In this case, I found it to be an extremely useful tool to display some of Maria's most recent works instead of listing them:
-
-![Swiper integration.](/assets/screenshots/MariaBrioPortfolio-05.png)
-
-> [!NOTE]
-> If you don't want to include Swiper files in your project, remember that you may use it from CDN instead. For more information, here's the link to [Swiper's docs](https://swiperjs.com/get-started).
-
---- 
-
+---
