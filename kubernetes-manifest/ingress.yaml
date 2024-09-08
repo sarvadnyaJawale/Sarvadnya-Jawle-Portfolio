@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: portfolio-ingress
+  namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: a82e79834de8e4f7ab057cf5e280ac92-1184691413.ap-south-1.elb.amazonaws.com
+    http:
+      paths:
+      - path: /new
+        pathType: Prefix
+        backend:
+          service:
+            name: portfolio-service
+            port:
+              number: 8080
