@@ -109,5 +109,4 @@ In this case, the idea I had in mind was simple: a clean, minimalist, compact po
 
 Swiper is considered one of the most modern free and open-source mobile touch slider with hardware-accelerated transitions - websites, web apps, and mobile native/hybrid apps are no exception!
 
-In this case, I found it to be an extremely useful tool to display some of Maria's most recent works instead of listing them:
 ---
