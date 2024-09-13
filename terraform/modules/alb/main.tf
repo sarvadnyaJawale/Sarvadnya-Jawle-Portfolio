@@ -43,10 +43,10 @@ resource "aws_lb_listener" "app_lb_listener" {
     target_group_arn = aws_lb_target_group.app_tg.arn
   }
 }
-# ALB Target Group Attachment using Auto Scaling Group
-resource "aws_autoscaling_attachment" "asg_tg_attachment" {
-  autoscaling_group_name     = aws_eks_node_group.eks_node_group.resources[0].autoscaling_group_name
-  alb_target_group_arn       = aws_lb_target_group.app_tg.arn
-}
+# ALB Target Group Attachment using Auto Scaling Group, 
+# resource "aws_autoscaling_attachment" "asg_tg_attachment" {
+#   autoscaling_group_name     = aws_eks_node_group.eks_node_group.resources[0].autoscaling_group_name
+#   target_group_arn           = aws_lb_target_group.app_tg.arn
+# }
 
 

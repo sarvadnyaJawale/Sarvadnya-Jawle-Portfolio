@@ -7,3 +7,6 @@ output "app_lb_dns" {
 output "app_lb_zone_id" {
   value = aws_lb.app_lb.zone_id
 }
+output "app_lb_tg_arn" {
+  value = aws_lb_target_group.app_tg.arn
+}
