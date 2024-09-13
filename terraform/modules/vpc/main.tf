@@ -55,6 +55,18 @@ resource "aws_route_table" "public_route_table" {
     Name = "Route table for public subnets"
   }
 }
+resource "aws_eip" "nat_eip" {
+  vpc = true
+}
+
+resource "aws_nat_gateway" "nat_gw" {
+  allocation_id = aws_eip.nat_eip.id
+  subnet_id     = var.cidr_public_subnet[0]  # Assuming you want to create the NAT Gateway in the first public subnet
+
+  tags = {
+    Name = "Portfolio-public-vpc-nat-gateway"
+  }
+}
 
 # Create private route table and add private route, This will add up route to nat gateway, that will allow Inbound-Traffic
 resource "aws_route_table" "private_route_table" {
@@ -62,7 +74,7 @@ resource "aws_route_table" "private_route_table" {
 
   route {
     cidr_block = "0.0.0.0/0"
-    nat_gateway_id = var.nat-gateway
+    nat_gateway_id = aws_nat_gateway.nat_gw.id
   }
 
   tags = {
