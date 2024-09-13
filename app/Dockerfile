@@ -6,3 +6,5 @@ WORKDIR /usr/local/apache2/htdocs/
 
 # Copy the application files from the app/src directory to the container's web server directory
 COPY ./src/ /usr/local/apache2/htdocs/
+
+EXPOSE 80

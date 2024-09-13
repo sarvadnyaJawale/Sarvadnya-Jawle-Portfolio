@@ -8,13 +8,13 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: a82e79834de8e4f7ab057cf5e280ac92-1184691413.ap-south-1.elb.amazonaws.com
+  - host: aa5332b2d3d484e28aa43e8b98376583-1472516885.ap-south-1.elb.amazonaws.com
     http:
       paths:
-      - path: /new
+      - path: /
         pathType: Prefix
         backend:
           service:
             name: portfolio-service
             port:
-              number: 8080
+              number: 80
