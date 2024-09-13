@@ -25,7 +25,7 @@ resource "aws_lb" "app_lb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [var.alb_security_group]
-  subnets            = [var.public_subnet_a1 , var.public_subnet_a2 ]  # Public subnets # we should create only one public subnet
+  subnets            = [var.public_subnet_a1 ]  # Public subnets # we should create only one public subnet
 
   tags = {
     Name = "tf-eks-app-lb"

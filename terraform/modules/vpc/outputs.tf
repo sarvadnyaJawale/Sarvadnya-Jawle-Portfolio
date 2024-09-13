@@ -10,6 +10,9 @@ output "private_subnet" {
 output "public_subnet_ids" { //this will give list of subnet ids
   value = aws_subnet.public_subnets[*].id
 }
+output "public_subnet_az1" { //this will give public subnet for az1
+  value = aws_subnet.public_subnets[0].id
+}
 output "private_subnet_ids" { //this will give list of subnet ids
   value = aws_subnet.private_subnets[*].id
 }

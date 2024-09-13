@@ -6,11 +6,11 @@ variable "cluster_name" {
   default     = "portfolio-eks-cluster"
 }
 
-variable "region" {
-  description = "The AWS region to deploy the EKS cluster"
-  type        = string
-  default     = "ap-south-1"
-}
+# variable "region" {
+#   description = "The AWS region to deploy the EKS cluster"
+#   type        = string
+#   default     = "ap-south-1"
+# }
 
 variable "private_subnets" {
   description = "List of private subnets for the EKS cluster"
@@ -23,23 +23,6 @@ variable "private_subnets" {
 #   default     = ["t2.medium"]
 # }
 
-variable "desired_size" {
-  description = "Desired number of nodes in the node group"
-  type        = number
-  default     = 2
-}
-
-variable "max_size" {
-  description = "Maximum number of nodes in the node group"
-  type        = number
-  default     = 4
-}
-
-variable "min_size" {
-  description = "Minimum number of nodes in the node group"
-  type        = number
-  default     = 1
-}
 
 variable "tags" {
   description = "Tags to apply to resources"
@@ -53,7 +36,4 @@ variable "ami_type" {
   description = "AMI type for the node group instances"
   type        = string
   default     = "ami-0522ab6e1ddcc7055"  #  Here Change it to Ubuntu Img
-}
-variable "eks-ng-lt" {
-  description = "aws-lt for eks nodes those will provisioned"
 }
