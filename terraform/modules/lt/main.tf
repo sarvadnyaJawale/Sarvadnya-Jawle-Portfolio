@@ -6,13 +6,23 @@ resource "aws_launch_template" "eks_launch_template" {
   iam_instance_profile {
     name = var.instance_profile_name
   }
-
-  network_interfaces {
-    associate_public_ip_address = false
-    security_groups             = [aws_security_group.eks_node_sg.id]
-    subnet_id                   = element(var.eks_ng_security_group, 0) # Example, should be dynamic
+  # it's my thought for dynamically provisioning the private subnets
+  # network_interfaces {
+  #   associate_public_ip_address = false
+  #   security_groups             = [var.eks_ng_security_group]
+  #   subnet_id                   =  var.private_subnets
+  # }
+  
+  # ChatGpt's way 
+  // Use dynamic block to iterate over the private subnets
+  dynamic "network_interfaces" {
+    for_each = toset(var.private_subnets)  # Convert the list to a set to iterate
+    content {
+      associate_public_ip_address = false
+      security_groups             = [var.eks_ng_security_group]
+      subnet_id                   = network_interfaces.value # Use the subnet ID dynamically
+    }
   }
-
   tag_specifications {
     resource_type = "instance"
 

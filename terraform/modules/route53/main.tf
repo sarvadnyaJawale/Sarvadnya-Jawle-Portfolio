@@ -26,5 +26,5 @@ resource "aws_route53_record" "www_alias" {
   name    = "www.${var.domain_name}"
   type    = "CNAME"
   ttl     = 300
-  records = [aws_route53_record.app_alb.name]
+  records = [var.app_lb_dns]
 }

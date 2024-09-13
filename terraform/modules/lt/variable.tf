@@ -14,3 +14,6 @@ variable "instance_profile_name" {
     type        = string
     default     = "Portfolio-eks-ng-lt"  
 }
+variable "private_subnets" {
+  
+}

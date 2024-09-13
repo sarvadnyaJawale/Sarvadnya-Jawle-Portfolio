@@ -61,7 +61,7 @@ resource "aws_eip" "nat_eip" {
 
 resource "aws_nat_gateway" "nat_gw" {
   allocation_id = aws_eip.nat_eip.id
-  subnet_id     = var.cidr_public_subnet[0]  # Assuming you want to create the NAT Gateway in the first public subnet
+  subnet_id     = aws_subnet.public_subnets[0].id # Assuming you want to create the NAT Gateway in the first public subnet
 
   tags = {
     Name = "Portfolio-public-vpc-nat-gateway"
