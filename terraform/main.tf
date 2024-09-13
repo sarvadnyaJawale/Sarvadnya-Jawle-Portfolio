@@ -14,7 +14,7 @@ module "lt" {
   instance_profile_name = "Portfolio-eks-ng-lt"
 }
 module "asg" {          # in future add Auto Scaling Policies based on CPU, Memory and Performance as per your monitoring
-  source = "./modules/asg"  
+  source                = "./modules/asg"  
   name                  = "Portfolio-eks-nodes-asg"
   launch_template_id    = module.lt.eks-ng-lt
   subnet_ids            = module.vpc.private_subnet_ids
