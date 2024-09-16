@@ -5,10 +5,15 @@ metadata:
   namespace: default
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: portfolio-cert-issuer
 spec:
+  tls: # < placing a host in the TLS config will determine what ends up in the cert's subjectAltNames
+  - hosts:
+    - sarvadnya.tech
+    secretName: portfolio-tls-cert # < cert-manager will store the created certificate in this secret.
   ingressClassName: nginx
   rules:
-  - host: aa5332b2d3d484e28aa43e8b98376583-1472516885.ap-south-1.elb.amazonaws.com
+  - host: sarvadnya.tech
     http:
       paths:
       - path: /

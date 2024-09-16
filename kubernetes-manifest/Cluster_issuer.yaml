@@ -1,0 +1,40 @@
+# How it is Works,
+# Cert issuer will issue ( Request ) Cert ---> Let's Encrypt ---> ( Give you Certificate ) ---> Store Cert as Secret ( Certificate.yaml ) ---> we add this Cert as in Ingress using tls...
+
+
+# kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.15.3/cert-manager.
+# we install Cert Manager then to run inside of cluster we need cert-issuer
+#Let's Encrypt has two types of servers for signing certificates, Stage and Prod, those who do not have stage those are Prod
+# ClusterIssuer is just like Proxy Server, where it will send cert request to Let's Encrypt and LE will Send a Cert 
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: portfolio-cert-issuer
+spec:
+  acme:
+    # You must replace this email address with your own.
+    # Let's Encrypt will use this to contact you about expiring
+    # certificates, and issues related to your account.
+    email: sarvadnyajawle@gmail.com
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      # Secret resource that will be used to store the account's private key.
+      name: portfolio-issuer-account-key
+    # Add a single challenge solver, HTTP01 using nginx
+    solvers:
+    - http01:
+        ingress:
+          ingressClassName: nginx
+# Let's Encrypt will send you Certificate then we will store it as Secret by using Certificate manifest
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: portfolio-tls-cert
+  namespace: default
+spec:
+  # Secret names are always required.
+  secretName: portfolio-tls-cert # its different than Issuer secret name , It will store Certifiact as secret
+  issuerRef:
+    name: Portfolio-Cert-issuer # Here name of issuer
+    kind: ClusterIssuer
