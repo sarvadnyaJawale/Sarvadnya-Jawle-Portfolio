@@ -1,7 +1,5 @@
 provider "aws" {
   region = "ap-south-1"  # Change to your AWS region
-  access_key = "AKIA6ODU7LBUOUQIGQ4Q"
-  secret_key = "njcZYXhFGxPrA2BGCSDhnmp5Z6PmnS6b8uKnQ66e"
 }
 
 data "aws_vpc" "existing_vpc" {
