@@ -9,12 +9,10 @@ variable "aws_access_key" {
   description = "AWS access key."
   type        = string
   sensitive   = true
-  default     = "AKIA6ODU7LBUBIAHSH2N"
 }
 
 variable "aws_secret_key" {
   description = "AWS secret key."
   type        = string
   sensitive   = true
-  default     = "q99HPmjl5ST1BYwYqLFWHmcCAFs2x+5hc1t1S7pF"
 }
