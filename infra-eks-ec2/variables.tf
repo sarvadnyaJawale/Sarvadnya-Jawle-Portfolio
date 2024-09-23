@@ -2,7 +2,7 @@
 variable "aws_region" {
   description = "The AWS region to deploy resources in."
   type        = string
-  default     = "us-west-2"                  # Set your default region
+  default     = "ap-south-1"                  # Set your default region
 }
 # Uncomment if using static credentials
 variable "aws_access_key" {
