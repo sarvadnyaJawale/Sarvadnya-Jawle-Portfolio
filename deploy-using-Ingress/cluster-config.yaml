@@ -1,0 +1,37 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+availabilityZones:
+- ${AWS_REGION}a
+- ${AWS_REGION}b
+- ${AWS_REGION}c
+metadata:
+  name: ${EKS_CLUSTER_NAME}
+  region: ${AWS_REGION}
+  version: "1.30"
+  tags:
+    portfolio-eks-cluster: ${EKS_CLUSTER_NAME}
+    env: ${EKS_CLUSTER_NAME}
+iam:
+  withOIDC: true
+vpc:
+  cidr: 24.10.0.0/16
+  clusterEndpoints:
+    privateAccess: true
+    publicAccess: true
+addons:
+- name: vpc-cni
+  version: 1.16.0
+  configurationValues: '{"env":{"ENABLE_PREFIX_DELEGATION":"true", "ENABLE_POD_ENI":"true", "POD_SECURITY_GROUP_ENFORCING_MODE":"standard"},"enableNetworkPolicy": "true", "nodeAgent": {"enablePolicyEventLogs": "true"}}'
+  resolveConflicts: overwrite
+managedNodeGroups:
+- name: portfolio-${EKS_CLUSTER_NAME}-ng-1
+  desiredCapacity: 1
+  minSize: 1
+  maxSize: 2
+  instanceType: t2.medium
+  privateNetworking: true
+  releaseVersion: "1.30.0-20240625"
+  updateConfig:
+    maxUnavailablePercentage: 50
+  labels:
+    app: portfolio
