@@ -33,12 +33,12 @@ module "alb" {
   public_subnet_az2     = module.vpc.public_subnet_az2
   alb_security_group    = module.sg.alb_security_group
 }
-module "route53" {
-  source                = "./modules/route53"
-  domain_name           = "sarvadnya.tech"
-  app_lb_dns            = module.alb.app_lb_dns
-  app_lb_zone_id        = module.alb.app_lb_zone_id      
-}
+# module "route53" {
+#  source                = "./modules/route53"
+#  domain_name           = "sarvadnya.tech"
+#  app_lb_dns            = module.alb.app_lb_dns
+#  app_lb_zone_id        = module.alb.app_lb_zone_id      
+# }
 # module "acm" {
 #   source                = "./modules/acm"
 #   route53_zone_id       = module.route53.route53_zone_id 
