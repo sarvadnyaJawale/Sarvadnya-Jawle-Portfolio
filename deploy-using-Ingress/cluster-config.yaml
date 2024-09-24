@@ -1,9 +1,5 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
-availabilityZones:
-- ${AWS_REGION}a
-- ${AWS_REGION}b
-- ${AWS_REGION}c
 metadata:
   name: portfolio-eks-cluster
   region: ap-south-1
