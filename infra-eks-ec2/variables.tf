@@ -5,14 +5,4 @@ variable "aws_region" {
   default     = "ap-south-1"                  # Set your default region
 }
 # Uncomment if using static credentials
-variable "aws_access_key" {
-  description = "AWS access key."
-  type        = string
-  sensitive   = true
-}
-
-variable "aws_secret_key" {
-  description = "AWS secret key."
-  type        = string
-  sensitive   = true
-}
+# in production we assign iam roles to ec2 that hosting terraform rather than providing a key to resoures 
