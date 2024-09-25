@@ -6,7 +6,7 @@ metadata:
   version: "1.30"
   tags:
     portfolio-eks-cluster: portfolio-eks-cluster
-    env: portfolio-eks-cluster
+    env: portfolio-eks-cluster-stage
 iam:
   withOIDC: true
 vpc:
