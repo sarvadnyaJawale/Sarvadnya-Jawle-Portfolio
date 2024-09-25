@@ -1,6 +1,6 @@
 # clusterissuer-lets-encrypt-staging.yaml
 apiVersion: cert-manager.io/v1
-kind: ClusterIssuer
+kind: Issuer
 metadata:
   name: portfolio-cert-issuer
 spec:

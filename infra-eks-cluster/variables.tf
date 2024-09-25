@@ -1,18 +1,10 @@
 # Variables for the provider configuration
-variable "aws_region" {
-  description = "The AWS region to deploy resources in."
-  type        = string
-  default     = "us-west-2"                  # Set your default region
+variable "cluster_name" { 
+  default = "portfolio-eks-cluster-terraform-configuration"
 }
-# Uncomment if using static credentials
-variable "aws_access_key" {
-  description = "AWS access key."
-  type        = string
-  sensitive   = true
+variable "vpc_cidr" {
+  default = "10.10.10.10/16"
 }
-
-variable "aws_secret_key" {
-  description = "AWS secret key."
-  type        = string
-  sensitive   = true
+variable "ami_release_version" {
+  default = "ami-0522ab6e1ddcc7055"
 }
