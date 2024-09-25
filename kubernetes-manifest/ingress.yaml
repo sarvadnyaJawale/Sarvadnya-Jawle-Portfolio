@@ -2,15 +2,9 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: portfolio-ingress
-  namespace: default
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-    cert-manager.io/cluster-issuer: portfolio-cert-issuer
 spec:
-  tls: # < placing a host in the TLS config will determine what ends up in the cert's subjectAltNames
-  - hosts:
-    - sarvadnya.tech
-    secretName: portfolio-tls-cert # < cert-manager will store the created certificate in this secret.
   ingressClassName: nginx
   rules:
   - host: sarvadnya.tech
