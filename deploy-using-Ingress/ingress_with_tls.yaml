@@ -38,7 +38,7 @@ spec:
   tls:
   - hosts:
     - sarvadnya.tech
-    secretName: portfolio-tls-cert
+    secretName: portfolio-tls-cert-nhs8c
   rules:
   - host: sarvadnya.tech
     http:
