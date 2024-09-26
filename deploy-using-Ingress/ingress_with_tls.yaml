@@ -43,7 +43,7 @@ spec:
   - host: sarvadnya.tech
     http:
       paths:
-      - path: /
+      - path: /kubernetes
         pathType: Prefix
         backend:
           service:
