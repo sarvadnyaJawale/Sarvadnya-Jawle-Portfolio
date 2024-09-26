@@ -20,7 +20,7 @@ metadata:
   name: portfolio-tls-certificate
   namespace: default
 spec:
-  secretName: portfolio-tls-certificate-gbdxb # The certificate will be stored in this secret
+  secretName: portfolio-tls-cert # The certificate will be stored in this secret
   dnsNames:
   - sarvadnya.tech # Domain name to secure
   issuerRef:
