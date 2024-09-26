@@ -38,7 +38,7 @@ spec:
   tls:
   - hosts:
     - sarvadnya.tech
-    secretName: portfolio-tls-cert
+    secretName: portfolio-tls-certificate-gbdxb
   rules:
   - host: sarvadnya.tech
     http:
