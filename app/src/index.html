@@ -144,45 +144,55 @@
             </div>
         </section>
         <!-- About section -->
-        <section class="about section" id="about">
-            <h2 class="section-title">About Me</h2>
-            <span class="section-subtitle">DevOps Engineer & Community Leader</span>
+<!-- About section -->
+<section class="about section" id="about">
+    <h2 class="section-title">About Me</h2>
+    <span class="section-subtitle">DevOps Engineer & Community Leader</span>
 
-            <div class="about-container container grid">
-                <div class="about-container-img">
-                    <a href="https://www.linkedin.com/in/sarvadnya-jawle" target="_blank" title="Connect with me on LinkedIn" class="profile-link">
-                        <img src="img/test-profile.png" alt="Profile Picture of Sarvadnya Jawle" class="about-container-imgAlt">
-                    </a>
+    <div class="about-container container grid">
+        <!-- About Image/Video Section -->
+        <div class="about-container-img">
+            <a href="https://www.linkedin.com/in/sarvadnya-jawle" target="_blank" title="Connect with me on LinkedIn" class="profile-link">
+                <!-- Video element instead of image -->
+                <video autoplay loop muted playsinline class="about-container-videoAlt">
+                    <source src="img/animation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
+        </div>
+
+        <!-- About Information Section -->
+        <div class="about-container-data">
+            <p class="about-container-data-description">
+                I'm a passionate DevOps Engineer with a knack for cloud automation and seamless deployments. With expertise in AWS, Docker, Kubernetes, and CI/CD pipelines, I strive to optimize infrastructure and enhance team efficiency. Outside of work, I lead community events and advocate for tech innovation.
+            </p>
+
+            <div class="about-container-data-info">
+                <!-- Stats Section -->
+                <div>
+                    <span class="about-container-data-info-title">27</span>
+                    <span class="about-container-data-name">Written <br> Articles</span>
                 </div>
-
-                <div class="about-container-data">
-                    <p class="about-container-data-description">
-                     I'm a passionate DevOps Engineer with a knack for cloud automation and seamless deployments. With expertise in AWS, Docker, Kubernetes, and CI/CD pipelines, I strive to optimize infrastructure and enhance team efficiency. Outside of work, I lead community events and advocate for tech innovation.
-                    </p>
-
-                    <div class="about-container-data-info">
-                        <div>
-                            <span class="about-container-data-info-title">27</span>
-                            <span class="about-container-data-name">Written <br> Articles</span>
-                        </div>
-                        <div>
-                            <span class="about-container-data-info-title">17+</span>
-                            <span class="about-container-data-name">DevOps <br> Projects</span>
-                        </div>
-                        <div>
-                            <span class="about-container-data-info-title">3+</span>
-                            <span class="about-container-data-name">Spoken <br> Languages</span>
-                        </div>
-                    </div>
-
-                    <div class="about-buttons">
-                        <a download="" href="assets/Sarvadnya_DevOps.pdf" class="button button-flex">
-                            Download CV <i class="fas fa-download button-icon"></i>
-                        </a>
-                    </div>
+                <div>
+                    <span class="about-container-data-info-title">17+</span>
+                    <span class="about-container-data-name">DevOps <br> Projects</span>
+                </div>
+                <div>
+                    <span class="about-container-data-info-title">3+</span>
+                    <span class="about-container-data-name">Spoken <br> Languages</span>
                 </div>
             </div>
-        </section>
+
+            <!-- Download CV Button -->
+            <div class="about-buttons">
+                <a download href="assets/Sarvadnya_DevOps.pdf" class="button button-flex">
+                    Download CV <i class="fas fa-download button-icon"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
         <!-- Skills Section -->
         <section class="skills section" id="skills">
             <h2 class="section-title">Skills</h2>

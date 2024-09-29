@@ -331,43 +331,78 @@ img {
 }
 
 /* About section */
+/* Container for the image/video */
 .about-container-img {
   display: flex;
   justify-content: center;
+  align-items: center; /* Vertical centering */
+  width: 100%;
 }
-.about-container-imgAlt {
-  width: 265px;
-  border-radius: 0.5rem;
+
+/* Styles for both image and video to ensure consistency */
+.about-container-imgAlt,
+.about-container-videoAlt {
+  width: 265px; /* Ensure it's the same size as the image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 0.5rem; /* Rounded corners */
+  object-fit: cover;
 }
+.about-container-videoAlt {
+  
+    width: 100%; /* Let the video take the full width of its container */
+    max-width: 500px; /* Adjust this based on your design needs */
+    border-radius: 0.5rem;
+    object-fit: cover; /* Ensures the video fits inside the container without stretching */
+
+}
+.about-container-data {
+  flex-grow: 1; /* Allows the text section to take up its necessary space */
+}
+
+/* Styling for the about section text */
 .about-container-data-description {
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-2-5);
   text-align: center;
 }
+
+/* Flexbox for displaying the info section (articles, projects, languages) */
 .about-container-data-info {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: var(--mb-2-5);
 }
+
 .about-container-data-info div {
   text-align: center;
 }
+
+/* Styling for the titles in the info section */
 .about-container-data-info-title {
   color: var(--title-color);
   font-size: var(--h2-font-size);
   font-weight: var(--font-semi-bold);
 }
+
+/* Styling for the labels in the info section */
 .about-container-data-info-name {
   font-size: var(--smaller-font-size);
 }
-.about-container-data-info-title, .about-container-data-info-name {
+
+/* Ensures titles and labels are block elements and center aligned */
+.about-container-data-info-title, 
+.about-container-data-info-name {
   display: block;
   text-align: center;
 }
+
+/* Flexbox for the CV download button */
 .about-container .about-buttons {
   display: flex;
   justify-content: center;
 }
+
+/* Optional margin for any additional links */
 .about-container .phd-link {
   margin-top: 25px;
 }
