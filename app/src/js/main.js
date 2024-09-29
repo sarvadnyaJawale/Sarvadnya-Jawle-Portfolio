@@ -149,13 +149,13 @@ themeButton.addEventListener("click", () => {
 
 /* Mail integration */
 document.addEventListener("DOMContentLoaded", function() {
-  emailjs.init("A9PZASRNY-NxAYHQX")
+  emailjs.init("emSGsH0EIsKLVL8IZ")
 })
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault()
 
-  emailjs.sendForm('service_btvk1js', 'template_zhvgvnk', this)
+  emailjs.sendForm('service_btvk1js', 'template_jr9h0wa', this)
     .then(function(response) {
       console.log('Success!', response.status, response.text)
       alert('Email sent successfully!')
