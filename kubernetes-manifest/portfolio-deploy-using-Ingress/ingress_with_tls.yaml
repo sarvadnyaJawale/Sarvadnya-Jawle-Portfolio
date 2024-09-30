@@ -1,0 +1,52 @@
+# # Ingress is Nothing without Ingress-Controllers 
+# # kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.2/deploy/static/provider/cloud/deploy.yaml
+
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: portfolio-ingress
+#   namespace: default
+#   annotations:
+#     nginx.ingress.kubernetes.io/rewrite-target: /
+#     cert-manager.io/cluster-issuer: portfolio-cert-issuer
+# spec:
+#   tls: # < placing a host in the TLS config will determine what ends up in the cert's subjectAltNames
+#   - hosts:
+#     - sarvadnya.tech
+#     secretName: portfolio-tls-cert # < cert-manager will store the created certificate in this secret.
+#   ingressClassName: nginx
+#   rules:
+#   - host: sarvadnya.tech
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: portfolio-service
+#             port:
+#               number: 80
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: portfolio-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: portfolio-cert-issuer
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - sarvadnya.tech
+    secretName: portfolio-tls-cert
+  rules:
+  - host: sarvadnya.tech
+    http:
+      paths:
+      - path: /kubernetes
+        pathType: Prefix
+        backend:
+          service:
+            name: portfolio-service
+            port:
+              number: 80
