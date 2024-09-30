@@ -23,8 +23,8 @@ managedNodeGroups:
 - name: portfolio-eks-cluster-ng-1
   desiredCapacity: 1
   minSize: 1
-  maxSize: 2
-  instanceType: t2.medium
+  maxSize: 10
+  instanceType: t2.large
   privateNetworking: true
   releaseVersion: "1.30.0-20240625"
   updateConfig:
