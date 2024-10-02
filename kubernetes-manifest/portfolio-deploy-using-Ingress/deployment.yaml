@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: sarva-portfolio
-        image: sarvadnya/portfolio:v1.0.6
+        image: sarvadnya/portfolio:v1.0.7
         ports:
         - containerPort: 80
