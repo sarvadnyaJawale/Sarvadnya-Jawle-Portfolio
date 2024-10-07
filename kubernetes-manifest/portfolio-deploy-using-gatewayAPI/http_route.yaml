@@ -6,8 +6,16 @@ spec:
   parentRefs:
   - name: portfolio-gateway
     sectionName: http
+  hostnames:
+  - "sarvadnya.tech"
   rules:
   - backendRefs:
     - name: portfolio-service
       kind: Service
       port: 80
+    rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /home
+
