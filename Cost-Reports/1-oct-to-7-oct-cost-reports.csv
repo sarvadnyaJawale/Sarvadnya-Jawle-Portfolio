@@ -1,0 +1,19 @@
+Provider,Service,2024-10-01,2024-10-02,2024-10-03,2024-10-04,2024-10-05
+AWS,Amazon Elastic Block Storage (EBS),0.0,0.0,0.0,0.0,0.0
+AWS,Amazon Route 53,0.5902308,0.0004088,0.0001696,0.000152,0.0001388
+AWS,Amazon DynamoDB,0.0,0.0,0.0,0.0,0.0
+AWS,AWS CloudFormation,0.0,0.0,,,
+AWS,Amazon Elastic Compute Cloud - Compute,3.24,2.281608409,2.3808,2.3808,2.3808
+AWS,Amazon Virtual Private Cloud,0.21,0.2218,0.24,0.24,0.24
+AWS,AWS Cost Explorer,0.17,0.1,0.03,0.03,0.05
+AWS,Amazon Simple Storage Service,0.0,0.0000001915,0.0000003702,0.0000003599,0.0000003693
+AWS,Amazon Elastic Container Service for Kubernetes,2.08,2.2591575,2.4,2.4,2.4
+AWS,NAT Gateways,,1.288000366,1.3440005426,1.3440005144,1.3440006114
+AWS,Amazon Glacier,,0.0000000238,,,
+AWS,Amazon Simple Notification Service,0.0,0.0,,,
+AWS,AmazonCloudWatch,0.0,0.0005,0.0,0.0,0.0
+AWS,Amazon Simple Queue Service,0.0,0.0,,,
+AWS,AWS Key Management Service,0.0,0.0,,,
+AWS,Amazon Elastic Load Balancing,0.0,0.0000239671,0.0000445306,0.0000393447,0.0000285156
+AWS,AWS Secrets Manager,0.0,0.000085,,,
+AWS,AWS Data Transfer,0.0,,,,
