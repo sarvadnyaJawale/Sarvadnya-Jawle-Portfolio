@@ -8,5 +8,3 @@ spec:
   - name: http
     protocol: HTTP
     port: 80
-
-
