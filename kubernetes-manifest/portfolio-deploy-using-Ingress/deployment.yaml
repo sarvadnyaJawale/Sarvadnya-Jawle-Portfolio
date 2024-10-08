@@ -6,7 +6,7 @@ metadata:
   labels:
     app: portfolio
 spec:
-  replicas: 2
+  # replicas: 2  #we are shifting to HPA Configuration do not need to hardcode values for no of pods replics 
   selector:
     matchLabels:
       app: portfolio
