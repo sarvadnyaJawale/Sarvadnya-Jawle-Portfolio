@@ -21,6 +21,8 @@ metadata:
   namespace: default
 spec:
   secretName: portfolio-tls-certificate # The certificate will be stored in this secret
+  privateKey:
+    rotationPolicy: Always # it will rotate private key just before certificate renewal!
   dnsNames:
   - sarvadnya.tech # Domain name to secure
   issuerRef:
