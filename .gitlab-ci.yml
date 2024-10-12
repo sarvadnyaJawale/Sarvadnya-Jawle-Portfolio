@@ -1,0 +1,43 @@
+stages:
+  - deploy
+  - rollback
+
+variables:
+  SSH_USER: ubuntu  # Change this to your EC2 user
+  SSH_HOST: 65.0.139.156  # Replace with your EC2 instance's public IP
+  DEPLOY_PATH: /home/ubuntu  # Directory where the application is deployed on EC2
+  REPO_URL: https://github.com/sarvadnyaJawale/Sarvadnya-Jawle-Portfolio.git  # Replace with your GitHub repo URL
+  SSH_KEY_PATH: .
+
+before_script:
+  # Ensure SSH is set up with the private key for deployment.
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  - eval $(ssh-agent -s)
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > $SSH_KEY_PATH
+  - chmod 600 $SSH_KEY_PATH
+  - ssh-add $SSH_KEY_PATH
+
+  # Add EC2 instance to known hosts (to avoid prompts during SSH).
+  - mkdir -p ~/.ssh
+  - ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
+
+deploy:
+  stage: deploy
+  only:
+    - main # Trigger this job only on the 'portfolio' branch
+  script:
+    - echo "Deploying application to EC2 instance..."
+    - ssh $SSH_USER@$SSH_HOST "cd $DEPLOY_PATH && git pull $REPO_URL main "
+    - ssh $SSH_USER@$SSH_HOST "sudo systemctl restart sarvadnya-tech"  # Restart the application service on EC2
+  environment:
+    name: production
+
+rollback:
+  stage: rollback
+  when: on_failure
+  script:
+    - echo "Deployment failed. Rolling back..."
+    - ssh $SSH_USER@$SSH_HOST "cd $DEPLOY_PATH && git reset --hard HEAD~1"
+    - ssh $SSH_USER@$SSH_HOST "sudo systemctl restart sarvadnya-tech"
+  environment:
+    name: production
