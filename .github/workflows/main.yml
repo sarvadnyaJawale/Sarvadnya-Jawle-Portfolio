@@ -3,7 +3,7 @@ name: Docker CI/CD Workflow
 on:
   push:
     branches:
-    - test
+    - main
 
 jobs:
   build-and-deploy:
