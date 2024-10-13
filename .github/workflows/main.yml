@@ -3,14 +3,14 @@ name: Docker CI/CD Workflow
 on:
   push:
     branches:
-    - test
+    - test # You have to do changes over here
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the code from the repository.
+
     - name: Checkout code
       uses: actions/checkout@v3
 
