@@ -45,7 +45,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: trivy-report
-        path: ${{ github.workspace }}/trivy-report2.txt
+        path: trivy-report2.txt
 
     # Step 5: Push the Docker image to Docker Hub.
     - name: Push Docker image
