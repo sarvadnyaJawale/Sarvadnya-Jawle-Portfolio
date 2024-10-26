@@ -8,7 +8,7 @@ metadata:
 nodeGroups:
 - name: portfolio-eks-cluster-ng
   instanceType: t2.large
-  desiredCapacity: 1
+  desiredCapacity: 2
   minSize: 1
   maxSize: 10
   labels:
