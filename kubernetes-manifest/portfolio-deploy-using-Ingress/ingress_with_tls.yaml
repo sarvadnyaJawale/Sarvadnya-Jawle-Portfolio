@@ -21,7 +21,6 @@
 #       paths:
 #       - path: /
 #         pathType: Prefix
-#         backend:
 #           service:
 #             name: portfolio-service
 #             port:
@@ -31,14 +30,14 @@ kind: Ingress
 metadata:
   name: portfolio-ingress
   annotations:
-    cert-manager.io/cluster-issuer: portfolio-cert-issuer
+    # cert-manager.io/cluster-issuer: portfolio-cert-issuer
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
-  tls:
-  - hosts:
-    - sarvadnya.tech
-    secretName: portfolio-tls-certificate
+  # tls:
+  # - hosts:
+  #   - sarvadnya.tech
+  #   secretName: portfolio-tls-certificate
   rules:
   - host: sarvadnya.tech
     http:
