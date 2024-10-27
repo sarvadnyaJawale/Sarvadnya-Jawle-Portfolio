@@ -3,7 +3,8 @@ name: Docker CI/CD Workflow
 on:
   push:
     branches:
-    - test # You have to do changes over here
+    -
+    # You have to do changes over here
 
 jobs:
   build-and-deploy:
