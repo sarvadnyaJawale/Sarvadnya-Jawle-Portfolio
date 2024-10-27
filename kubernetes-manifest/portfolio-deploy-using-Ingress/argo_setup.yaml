@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/sarvadnyaJawale/Sarvadnya-Jawle-Portfolio.git'
+    targetRevision: HEAD
+    path: 'kubernetes-manifest/portfolio-deploy-using-Ingress' # Path to your Kubernetes manifests
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default # Namespace where the app will be deployed
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
