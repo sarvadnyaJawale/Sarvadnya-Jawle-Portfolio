@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/sarvadnyaJawale/Sarvadnya-Jawle-Portfolio.git'
     targetRevision: HEAD
-    path: 'kubernetes-manifest/portfolio-deploy-using-Ingress' # Path to your Kubernetes manifests
+    path: 'kubernetes-manifest/deploy-using-argo' # Path to your Kubernetes manifests
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default # Namespace where the app will be deployed
