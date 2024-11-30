@@ -34,6 +34,8 @@ This project reflects real-world DevOps practices—building, automating, securi
 | **Monitoring&Alerting**              | Real-time monitoring with Prometheus/Grafana and security alerts using Trivy, integrated with Slack for instant notifications.                                                                                                                                               |
 ---
 
+![Final-arch](https://github.com/user-attachments/assets/58b8fee8-bc6f-4419-9a2b-eb95a724e9d1)
+
 # 🔮 Features
 ## 🌒 Automated Security Scanning with Trivy Operator
 I integrated Trivy Operator into my AWS EKS Cluster for continuous vulnerability scanning. It automates the detection of security issues across containers and Kubernetes resources. Here's how it helps:
