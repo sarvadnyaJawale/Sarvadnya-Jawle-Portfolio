@@ -1,20 +1,6 @@
 # Sarvadnya Jawle |♾️
 
-<p align="center">
-  <a href="https://mariabrio.vercel.app">
-    <img src="app/src/favicon/favicon-512x512.png" width="70" alt="Portfolio's favicon.">
-  </a>
-</p>
-<p align="center">
-  <span style="font-size: larger;">Sarvadnya jawle | Portfolio</span>
-</p>
-
-
-<div align="center">
-  <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 badge" title="HTML" />
-  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript badge" title="JavaScript" />
-  <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass badge" title="Sass" />
-</div>
+<p align="center"> <a href="https://sarvadnya.tech"> <img src="https://github.com/sarvadnyaJawale/Sarvadnya-Jawle-Portfolio/blob/main/assets/favicon.png" width="70" alt="Portfolio's favicon"> </a> </p> <p align="center"> <span style="font-size: larger;">sarvadnya.tech | DevOps Portfolio</span> </p> <div align="center"> <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS badge"> <img src="https://img.shields.io/badge/Terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform badge"> <img src="https://img.shields.io/badge/Kubernetes-%23326CE5.svg?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes badge"> <img src="https://img.shields.io/badge/Docker-%232496ED.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker badge"> </div>
 
 Table of Contents
 -----------------
